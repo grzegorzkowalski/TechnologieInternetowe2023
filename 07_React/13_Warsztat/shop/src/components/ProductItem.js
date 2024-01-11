@@ -10,14 +10,14 @@ const ProductItem = ({data, addToBasket}) => {
         }
     }
     return (
-        <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={data.thumb} />
-            <Card.Body>
-                <Card.Title>{data.title}</Card.Title>
-                <Card.Text>
+        <Card style={{ height: '400px' }}>
+            <Card.Img className={'align-middle'} variant="top" src={data.thumb} style={{width: 'auto', height: '200px'}} />
+            <Card.Body className={'p-0'}>
+                <Card.Title className={'m-0'} style={{height: '100px'}}>{data.title}</Card.Title>
+                <Card.Text className={'m-0'} style={{height: '30px'}}>
                     Cena: {data.price} zł
                 </Card.Text>
-                <Button variant="primary" onClick={clickHandler}>Dodaj do koszyka</Button>
+                <Button style={{height: '50px'}} variant="primary" onClick={clickHandler}>Dodaj do koszyka</Button>
             </Card.Body>
         </Card>
     );

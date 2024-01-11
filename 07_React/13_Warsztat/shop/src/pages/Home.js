@@ -7,7 +7,7 @@ const Home = () => {
     const [pens, setPens] = useState([]);
     const [basket, setBasket] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:3000/products")
+        fetch("http://localhost:8000/products")
             .then(res => res.json())
             .then(res => setPens(res))
             .catch(error => console.log(error))
@@ -29,11 +29,12 @@ const Home = () => {
                     </>
                 }
             </Row>
-            <Row>
+            <Row className={'text-center'}>
                 {
-                    pens.map((el) => <ProductItem data={el} addToBasket={setBasket} key={el.slug} />)
+                    pens.map((el) => <Link className={'col-3 mb-2 p-2'} to={`/product/${el.id}`}><ProductItem data={el} addToBasket={setBasket} key={el.id} /></Link>)
                 }
             </Row>
+            
         </>
 
     );

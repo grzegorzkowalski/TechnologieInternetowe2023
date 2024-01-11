@@ -11,7 +11,7 @@ import './App.css';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/home",
     element: <Home />,
     errorElement: <ErrorPage />
   },
@@ -19,13 +19,23 @@ const router = createBrowserRouter([
     path: "/summary/:price",
     element: <Summary />
   },
+  {
+    path: "/",
+    element: <Home />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/product/:id",
+    element: <Product />,
+    errorElement: <ErrorPage />
+  },
 ]);
 function App() {
   return (
         <Container>
           <Navbar bg="primary" variant="dark">
             <Container>
-              <Navbar.Brand href="#home">Logo</Navbar.Brand>
+              <Navbar.Brand href="../home">Logo</Navbar.Brand>
               <Nav className="me-auto">
                 <Nav.Link href="#pricing">Koszyk</Nav.Link>
               </Nav>
