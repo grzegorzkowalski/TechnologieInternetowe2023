@@ -17,6 +17,7 @@ import Buttons from "./components/Chapter08/Buttons.jsx";
 import TextTyper from "./components/Chapter08/TextTyper.jsx";
 import Shop from "./components/Chapter09/Shop.jsx";
 import BookInfo from "./components/Chapter12/BookInfo.jsx";
+import NumberInfo from "./components/Chapter10/NumberInfo.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -81,6 +82,12 @@ function App() {
         <TextTyper text="Witaj!" />
         <Shop />
         <BookInfo isbn="0747532699" />
+        <NumberInfo number={1} />
+        <NumberInfo number={2} />
+        <NumberInfo number={5} />
+        <NumberInfo number={7} />
+        <NumberInfo number={10} />
+        <NumberInfo number={16} />
     </>
   )
 }
