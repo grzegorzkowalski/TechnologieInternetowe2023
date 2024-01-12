@@ -16,6 +16,7 @@ import Clock from "./components/Chapter07/Clock.jsx";
 import Buttons from "./components/Chapter08/Buttons.jsx";
 import TextTyper from "./components/Chapter08/TextTyper.jsx";
 import Shop from "./components/Chapter09/Shop.jsx";
+import BookInfo from "./components/Chapter12/BookInfo.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -79,6 +80,7 @@ function App() {
         <Buttons />
         <TextTyper text="Witaj!" />
         <Shop />
+        <BookInfo isbn="0747532699" />
     </>
   )
 }

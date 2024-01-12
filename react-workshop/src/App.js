@@ -2,6 +2,7 @@ import Hello from "./components/Chapter11/Hello";
 import './App.css';
 import CarList from "./components/Chapter11/CarList";
 import AddTwoNumbers from "./components/Chapter11/AddTwoNumbers";
+import BookInfo from "./components/Chapter12/BookInfo";
 
 const shopItemElement = {
     title: "MacBook Pro",
@@ -21,6 +22,7 @@ function App() {
         {/*  fetch("https://www.googleapis.com/books/v1/volumes?q=isbn:0747532699")*/}
         {/*  .then(res => res.json())*/}
         {/*  .then(res2 => console.log(res2));*/}
+        <BookInfo isbn="0747532699" />
       </header>
     </div>
   );
